@@ -19,3 +19,6 @@ I only made this as a lightweight exploration of the topic out of my own interes
 
 Both the unpredictability and response time of an LLM like gemini-2.5-flash (as used here) make this an unrealistic metric for use in practice, but those are areas I hope to explore further 
 in the future.
+
+# Usage
+To use this notebook, a .env file of the format shown in .env-example must be included with your Gemini API key. Otherwise, running this notebook shouldn't require any special procedure.
