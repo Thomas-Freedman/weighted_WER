@@ -23,9 +23,11 @@ in the future.
 
 ## Sentence-wise weighting with embedding similarity (Added 9-30-25)
 The main issues with word-wise LLM weighting come from the fact that LLM queries are slow and inconsistent. Both of these issues can be addresssed, albeit at the expense of granularity/explainability, by using a far more efficient and predictable text embedding model to compare semantic similarity of the entire prediction vs. the entire reference. This similarity value can be obtained through simple cosine similarity of the two embeddings, at which point a weighting factor can be determined by passing the similarity through an exponential mapping function. 
-\[
-w(x) = \alpha \, e^{-\beta \, \bigl(2(x - 0.5)\bigr)}
-\]
+
+$$
+w(x) = \alpha e^{-\beta (2(x - 0.5))}
+$$
+
 Where alpha controls the maximum possible error factor (when two sentences are completely dissimilar) and beta controls the sharpness of the asymptote.
 
 The mapping function, of form serves two purposes:
